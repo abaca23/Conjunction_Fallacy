@@ -67,6 +67,16 @@ class main:
          self.canvas.delete('all')
          self.canvas.configure(bg = 'white')
          start = Button(self.master, text = 'Start', command = lambda: create(self))
+         self.canvas.create_text(
+            350,50,
+            text = 'This is an impulse based game. \n Dont think too much, the light on top tells you what to do. \n You have 5 seconds',
+            fill = 'black', font = ('Helvetica','15', 'bold'), justify='center')
+         self.canvas.create_text(
+            350, 225,
+            text ='Colors and Answers: \n \n -Yellow means the apple is correct.\t -Red means the orange is correct. \n \n \n \n \n BACKGROUNDS DONT MATTER',
+            fill ='black', font = ('Helvetica','15', 'bold'), justify='center')
+         self.canvas.create_text(50, 193,text = 'Yellow', fill = 'yellow',font = ('Helvetica','15', 'bold'))
+         self.canvas.create_text(390, 193,text = 'Red', fill = 'Red',font = ('Helvetica','15', 'bold'))
       else:
          rb = Button(self.master, text = 'again', command = lambda: create(self))
                   
@@ -158,7 +168,7 @@ class main:
             self.text = self.canvas.create_text(350, 175, text = 'COMPLETE', fill = 'black')
          else:
             point = 0
-            rounds = 0
+            rounds = 1
             f.write('1 \n')
             self.canvas.delete('all')
             self.canvas.configure(bg = 'red')
@@ -184,7 +194,7 @@ class main:
          else:
             f.write('2 \n')
             point = 0
-            rounds = 0
+            rounds = 1
             self.canvas.delete('all')
             self.canvas.configure(bg = 'red')
             self.text = self.canvas.create_text(350,175,text='FAILED', fill = 'black')
