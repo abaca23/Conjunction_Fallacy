@@ -1,13 +1,20 @@
 # Background
 This is the code used in a research project to give an inlook on the conjunction fallacy in humans using a pacman game.  (To know more information on this, look at the bottom of this README file.
 
-### To run
-To run this program, run
+### To run the research side
+If you would like to run the research program, make sure that you have a Data file in the same directory, though not having it will just lead to the program creating a Data file.  Then you can run the program using 
+```
+python3 testing_mode.py
+```
+After your data will be saved onto the Data file.  After 20 rounds, it is unlimited trials and there is no correct answers.  Additional presses of buttons after the end scene but before the next one will lead to a reset.  
 
+### To run the fun side
+
+If you would like to run the version of the program where the main point of the game is to get the highest score, enter
 ```
-python3 first_code.py
+python3 playing_mode.py
 ```
-this will pull up an window. Click 'again' to begin the proccess and 'q' to quit.
+If you would like, have a file named Score in the same directory. If this is not done, the program will simply create a new file.
 
 ### Information about the project leading in
 Fallacies are mistaken beliefs, especially one based on an unsound argument.
