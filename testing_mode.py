@@ -78,7 +78,7 @@ class main:
          self.canvas.create_text(50, 193,text = 'Yellow', fill = 'yellow',font = ('Helvetica','15', 'bold'))
          self.canvas.create_text(390, 193,text = 'Red', fill = 'Red',font = ('Helvetica','15', 'bold'))
       else:
-         rb = Button(self.master, text = 'again', command = lambda: create(self))
+         rb = Button(self.master, text = 'start', command = lambda: create(self))
                   
       self.canvas.pack(expand = True)
 
@@ -111,16 +111,13 @@ class main:
             50, 150, 100, 200, fill = 'red')
          #organe
          self.o = self.canvas.create_oval(
-            600, 150, 650, 200, fill = 'orange')
-
-         points = [425, 30, 435, 10, 465, 10, 475, 30, 475, 80,462.5, 70,450, 80,437.5,70, 425, 80]
-         self.canvas.create_polygon(points, fill = "red")
-         
+            600, 150, 650, 200, fill = 'orange'
          global MV
          MV = 0
          
          global ra
-         if point >= 20:
+         
+         if point >= 5:
             ra = 0
             self.canvas.create_rectangle(320,20,380,80, fill = 'red')
             f.write(str(ra) + ':')
@@ -131,12 +128,19 @@ class main:
                f.write(str(ra) + ':')
                self.l = self.canvas.create_oval(
                   325,25,375,75, fill = 'yellow')
+               self.canvas.create_rectangle(310,20,390,30, fill = 'brown')
+               cpoint = [310, 20, 310, 80, 315,80,320,70,325,70,330,60, 330, 20, 370, 20, 370, 60, 375, 70, 380, 70, 385, 80, 390, 80, 390, 20, 300, 20]
+               self.c = self.canvas.create_polygon(cpoint, fill = 'red')
+
             elif light == 2:
                ra = 2
                f.write(str(ra))
                self.l = self.canvas.create_oval(
                   325,25,375,75, fill = 'black')
-         
+               self.canvas.create_rectangle(310,20,390,30, fill = 'brown')
+               cpoint = [310, 20, 310, 80, 315,80,320,70,325,70,330,60, 330, 20, 370, 20, 370, 60, 375, 70, 380, 70, 385, 80, 390, 80, 390, 20, 300, 20]
+               self.c = self.canvas.create_polygon(cpoint, fill = 'red')
+
          global rbg
          rbg = random.randint(1,2)
 
@@ -172,7 +176,13 @@ class main:
             f.write('1 \n')
             self.canvas.delete('all')
             self.canvas.configure(bg = 'red')
-            self.text = self.canvas.create_text(350,175,text='FAILED', fill = 'black')
+            self.bgs = self.canvas.create_rectangle(50, 200, 300, 290, fill ='black')
+            self.pm = self.canvas.create_arc(
+	    150, 225, 250, 275, start = 225, extent = 90, fill = "#c0c90a")
+            
+            points = [100, 230, 110, 210, 140, 210, 150, 230, 150, 280, 100, 280]
+            self.canvas.create_polygon(points, fill = "blue")
+            self.text = self.canvas.create_text(350,175,text='FAILED',font=("Helvetica",25, 'bold'), fill = 'black')
       else:
          MV = MV - 1
          self.canvas.move(self.pm, -20, 0)
@@ -197,7 +207,14 @@ class main:
             rounds = 1
             self.canvas.delete('all')
             self.canvas.configure(bg = 'red')
-            self.text = self.canvas.create_text(350,175,text='FAILED', fill = 'black')
+            self.bgs = self.canvas.create_rectangle(50, 200, 300, 290, fill = 'black')
+            self.pm = self.canvas.create_arc(
+	    150, 225, 250, 275, start = 225, extent = 90, fill = "#c0c90a")
+            
+            points = [100, 230, 110, 210, 140, 210, 150, 230, 150, 280, 100, 280]
+            self.canvas.create_polygon(points, fill = "blue")
+            self.text = self.canvas.create_text(350,175,text='FAILED',font=("Helvetica",25, 'bold'), fill = 'black')
+            
       else:
          MV = MV + 1
          self.canvas.move(self.pm, 20, 0)
