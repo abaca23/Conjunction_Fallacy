@@ -85,6 +85,14 @@ class main:
          
          self.canvas.create_text(154, 164,text = 'Yellow', fill = 'yellow',font = ('Helvetica','15', 'bold'))
          self.canvas.create_text(404, 164,text = 'Red', fill = 'Red',font = ('Helvetica','15', 'bold'))
+
+      elif rounds == 10:
+         self.canvas.delete('all')
+         self.canvas.create_text(
+            350,175,
+            text = 'Mr.Ghost has closed the curtain.  There is no longer a light.  Do your best to guess the correct fruit.',
+            font = ('15', 'bold'))
+            
       else:
          rb = Button(self.master, text = 'start', command = lambda: create(self))
                   
@@ -92,13 +100,29 @@ class main:
 
       self.movement()
       
+      def check(self):
+         global point
+         global rounds
+         global ga
+         
+         if ga == 0:
+            if point >= 11:
+               master.quit()
+            else:
+               f.write('No option chossen' + '\n')
+               point = 0
+               rounds = 1
+               create(self)
+         else:
+            create(self)
+            
+      
       def create(self):
          global rounds
          global point
          
          rounds += 1
-
-         
+   
          #rid or all
          rb.destroy()
          self.canvas.delete('all')
@@ -129,10 +153,11 @@ class main:
          global ra
          
          if point >= 10:
+            self.canvas.create_text(350, 290, text ='Ghost: No light now.  What will you do!', fill = 'white')
             ra = 0
             cpoint = [310, 20, 390,20, 390, 90, 380, 90, 375, 80, 365, 80, 355, 70, 345, 80, 335, 80, 325, 80, 320, 90, 310, 90, 310, 20]
             self.canvas.create_polygon(cpoint, fill = '#4f3763')
-            f.write(str(ra) + ':')
+            f.write('No light --> ')
          else:
             light = random.randint(1,2)
             if light == 1:
@@ -163,7 +188,7 @@ class main:
             self.canvas.configure(bg = '#6c7ba3')
             f.write('----light----')
 
-         self.canvas.after(5000, lambda: create(self))
+         self.canvas.after(5000, lambda: check(self))
          
    def movement(self):
       self.canvas.move(self.pm, self.x, self.y)
@@ -185,6 +210,8 @@ class main:
                self.text = self.canvas.create_text(350, 175, text = 'COMPLETE', fill = 'black')
             else:
                f.write('1 \n')
+               point = 0
+               rounds = 1
                self.canvas.delete('all')
                self.canvas.configure(bg = 'red')
                self.bgs = self.canvas.create_rectangle(50, 200, 300, 290, fill ='black')
