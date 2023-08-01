@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # imports every file form tkinter and tkinter.ttk
 ##Now has finish screen and moving pacman
 ##5.21.23
@@ -6,7 +8,7 @@ from tkinter import *
 from tkinter.ttk import *
 import random
 
-f = open('Data','a')
+f = open('conjunction_data.txt','a')
 f.write('-----Start----- \n')
 
 class main:
@@ -54,7 +56,7 @@ class main:
       elif light == 2:
          ra = 2
          self.l = self.canvas.create_oval(
-            325,25,375,75, fill = 'black')
+            325,25,375,75, fill = 'red')
 
       global rbg
       rbg = random.randint(1,2)
@@ -129,7 +131,7 @@ class main:
          if point >= 10:
             ra = 0
             cpoint = [310, 20, 390,20, 390, 90, 380, 90, 375, 80, 365, 80, 355, 70, 345, 80, 335, 80, 325, 80, 320, 90, 310, 90, 310, 20]
-            self.canvas.create_polygon(cpoint, fill = 'red')
+            self.canvas.create_polygon(cpoint, fill = '#4f3763')
             f.write(str(ra) + ':')
          else:
             light = random.randint(1,2)
@@ -140,7 +142,7 @@ class main:
                   325,25,375,75, fill = 'yellow')
                self.canvas.create_rectangle(310,20,390,30, fill = 'brown')
                cpoint = [310, 20, 310, 80, 315,80,320,70,325,70,330,60, 330, 20, 370, 20, 370, 60, 375, 70, 380, 70, 385, 80, 390, 80, 390, 20, 300, 20]
-               self.c = self.canvas.create_polygon(cpoint, fill = 'red')
+               self.c = self.canvas.create_polygon(cpoint, fill = '#4f3763')
 
             elif light == 2:
                ra = 2
@@ -149,7 +151,7 @@ class main:
                   325,25,375,75, fill = 'black')
                self.canvas.create_rectangle(310,20,390,30, fill = 'brown')
                cpoint = [310, 20, 310, 80, 315,80,320,70,325,70,330,60, 330, 20, 370, 20, 370, 60, 375, 70, 380, 70, 385, 80, 390, 80, 390, 20, 300, 20]
-               self.c = self.canvas.create_polygon(cpoint, fill = 'red')
+               self.c = self.canvas.create_polygon(cpoint, fill = '#4f3763')
 
          global rbg
          rbg = random.randint(1,2)
