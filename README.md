@@ -1,24 +1,20 @@
 # Background
-This is the code used in a research project to give an inlook on the conjunction fallacy in humans using a pacman game.  (To know more information on this, look at the bottom of this README file.
+This project is a look into the conjunction fallacy in humans.  More about the conjunctions fallacy can be found in the attached document, basics_of_conjuntion.tex. 
 
-### To run the research side
-If you would like to run the research program, make sure that you have a Data file in the same directory, though not having it will just lead to the program creating a Data file.  Then you can run the program using 
+There are two versions of this code.  Conjunction_research.py is a program that can be used to look into the conjunction fallacy using a simple pacman game.  Endless_mode.py is for fun, where the goal is to get the highest score you can.
+
+## To run Conjunction.research
+The simple run:
 ```
 python3 testing_mode.py
 ```
-After your data will be saved onto the Data file.  After 20 rounds, it is unlimited trials and there is no correct answers.  Additional presses of buttons after the end scene but before the next one will lead to a reset.  
+will create an output file called Conjenction_data.txt, where you will get data seperated by `-----`.  
 
-### To run the fun side
+The goal is to go to the correct fruit based on the light on the screen.  You can move the pacman using right and left arrows.  Hitting `q` will quit the program.  After 20 rounds there is no specific purpose and the program will record your reaction.
 
-If you would like to run the version of the program where the main point of the game is to get the highest score, enter
+## To run Endless_mode.py
+A simple run of 
 ```
 python3 playing_mode.py
 ```
-If you would like, have a file named Score in the same directory. If this is not done, the program will simply create a new file.
-
-### Information about the project leading in
-Fallacies are mistaken beliefs, especially one based on an unsound argument.
-
-The conjunction is the mistaken belief that 2 conjunctions together are morer likely than either of the conjuncts.  For example, when asked to if more 7 letter words on a page end in "____ing" or in "_____n_", many will say that or think of more words containing "____ing" than "_____n_", despite "____ing" contining "_____n_".
-
-The pacman game is simple idea.  When shown 2 fruits and having to go one side or the other based on background color and a light, what will they do when the light is covered.  Will they assume the light is on or that the light is off?
+will create a text file called conjunct_score.txt.  It will only record the end score of the player then a new line.  Using the left and right arrows to move, your goal is to choose the right fruit based on the light on the top of the screen.
