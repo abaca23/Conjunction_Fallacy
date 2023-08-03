@@ -1,3 +1,170 @@
 correct_answer ---- background ---- given_answer
 
  
+-----Start----- 
+1:----dark----2 
+2----light----1 
+2----light----1 
+1:----dark----2 
+2----light----2 
+2----dark----1 
+1:----light----2 
+1:----light----2 
+2----light----2 
+1:----dark----2 
+2----dark----1 
+1:----light----1 
+2----light----2 
+1:----light----2 
+2----dark----1 
+2----light----2 
+2----dark----2 
+2----light----2 
+1:----light----2 
+2----dark----2 
+2----light----2 
+1:----dark----2 
+2----light----2 
+2----light----2 
+2----dark----2 
+1:----light----1 
+1:----dark----1 
+1:----light----1 
+1:----light----1 
+1:----dark----1 
+2----light----2 
+2----dark----2 
+No light --> ----dark----1 
+No light --> ----dark----1 
+No light --> ----dark----1 
+No light --> ----light----2 
+No light --> ----light----2 
+No light --> ----dark----2 
+No light --> ----dark----1 
+No light --> ----dark----2 
+No light --> ----dark----1 
+No light --> ----light----1 
+No light --> ----dark----2 
+No light --> ----light----1 
+No light --> ----dark----
+ 
+ 
+-----Start----- 
+1:----light----1 
+2----dark----2 
+1:----light----1 
+1:----dark----1 
+2----light----No option chossen
+1:----dark----2 
+1:----dark----1 
+2----light----2 
+1:----light----1 
+1:----light----1 
+1:----light----1 
+1:----light----1 
+2----dark----2 
+1:----light----1 
+2----light----2 
+2----light----2 
+No light --> ----light----1 
+No light --> ----light----1 
+No light --> ----dark----2 
+No light --> ----dark----2 
+No light --> ----dark----1 
+No light --> ----dark----1 
+No light --> ----light----2 
+No light --> ----dark----2 
+No light --> ----light----1 
+No light --> ----dark----2 
+No light --> ----light----1 
+
+ 
+ 
+-----Start----- 
+2----dark----No option chossen
+1:----light----No option chossen
+1:----dark----No option chossen
+1:----light----2 
+1:----light----No option chossen
+1:----dark----1 
+2----dark----No option chossen
+2----light----1 
+1:----dark----1 
+2----light----No option chossen
+1:----light----No option chossen
+2----dark----2 
+1:----dark----1 
+1:----light----1 
+1:----dark----No option chossen
+1:----dark----2 
+2----dark----1 
+1:----light----2 
+2----dark----No option chossen
+2----light----No option chossen
+1:----light----No option chossen
+1:----dark----1 
+1:----light----2 
+2----light----2 
+1:----dark----1 
+1:----light----1 
+2----dark----2 
+2----dark----2 
+2----light----2 
+2----dark----2 
+1:----dark----2 
+2----dark----2 
+1:----dark----2 
+2----dark----2 
+1:----light----1 
+2----light----2 
+1:----light----1 
+1:----light----1 
+1:----light----1 
+1:----dark----1 
+1:----light----1 
+2----light----2 
+1:----dark----1 
+No light --> ----light----No option chossen
+2----dark----2 
+2----light----2 
+1:----dark----No option chossen
+1:----light----No option chossen
+2----light----2 
+1:----light----1 
+2----dark----2 
+2----dark----2 
+2----dark----2 
+1:----dark----1 
+1:----dark----1 
+1:----dark----1 
+2----light----2 
+2----light----2 
+No light --> ----dark----1 
+No light --> ----light----2 
+No light --> ----light----1 
+No light --> ----light----2 
+No light --> ----light----1 
+No light --> ----light----2 
+No light --> ----dark----1 
+No light --> ----dark----2 
+No light --> ----dark----1 
+No light --> ----dark----2 
+No light --> ----light----1 
+No light --> ----light----
+ 
+ 
+-----Start----- 
+-----Start----- 
+-----Start----- 
+-----Start----- 
+
+ 
+ 
+-----Start----- 
+
+ 
+ 
+-----Start----- 
+
+ 
+ 
