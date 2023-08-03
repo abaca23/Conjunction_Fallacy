@@ -11,7 +11,8 @@ import random
 f = open('conjunction_data.txt','a')
 f.write('-----Start----- \n')
 
-class main:
+
+class mainscreen:
    def __init__(self, master = None):
       self.master = master
       self.x = 0
@@ -21,7 +22,7 @@ class main:
       global rounds
       global light
       global point
-
+      
       MV = 0
       rounds = 1
       point = 0
@@ -267,7 +268,7 @@ if __name__ == "__main__":
    # a tkinter toplevel window
    master = Tk()
    master.geometry("700x350")
-   gfg = main(master)
+   gfg = mainscreen(master)
             
    # This will bind arrow keys to the tkinter
    # toplevel which will navigate the image or drawing
